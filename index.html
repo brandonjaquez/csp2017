@@ -1,153 +1,239 @@
 <!doctype html>
-    <html lang="en">
+<html lang="en">
 
-         
-         <style>
+<!---------------------------------------------------------------------------------------------------------------------------------------->
+<style>
 
-  body{
- background-image:url(http://www.androidguys.com/wp-content/uploads/2016/05/tumblr_static_summer_sunset_created_by_-_marilou.png);
-  background-position:center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size:cover;
-          margin:0px;
-          padding:0px;
-          font-family:"Helvetica Neue", Helvetica, Arial;
+.crosshair       { cursor: crosshair; }
+
+            /* Basic Background Information */
+                      body{
+                        background-image:url(https://static2.lolwallpapers.net/2016/01/Teemo-Fan-Art.jpg);
+                           background-position:center;
+                              background-repeat: no-repeat;
+                                  background-attachment: fixed;
+                                      background-size:cover;
+                                          margin:0px;
+                                              padding:0px;
+                                                  font-family:"Helvetica Neue", Helvetica, Arial;
+                        }
+
+            /* Unvisited link */
+                a:link {
+                        color: green;
+                    }
+
+            /* Visited link */
+                a:visited { 
+                        color: pink;
+                    }
+
+                                                                /*This is the Styles for the sidebar*/
+                                                                #sidebar{
+                                                                  background:#151718;
+                                                                      width:200px;
+                                                                          height:100%;
+                                                                              display:block;
+                                                                                  position:absolute;
+                                                                                      left:-200px;
+                                                                                          top:0px;
+                                                                                              transition:left 0.3s linear;
+                                                                  
+                                                                }
+                                                                #sidebar.visible{
+                                                                  left:0px;
+                                                                      transition:left 0.3s linear;
+                                                                }
+                                                                ul{
+                                                                  margin:0px;
+                                                                      padding:0px;
+                                                                  
+                                                                }
+                                                                ul li{
+                                                                  list-style:none;
+                                                                  
+                                                                }
+                                                                ul li a{
+                                                                  background:#1C1E1F;
+                                                                      color:#ccc;
+                                                                          border-bottom:1px solid #111;
+                                                                              display:block;
+                                                                                  width:180px;
+                                                                                      padding:10px;
+                                                                                          text-decoration:none;
+                                                                }
+                                                                #sidebar-btn{
+                                                                  display:inline-block;
+                                                                      vertical-align:middle;
+                                                                          height:20px;
+                                                                              width:20px;
+                                                                                  cursor:pointer;
+                                                                                    margin:20px;
+                                                                                        position:absolute;
+                                                                                            top:0px;
+                                                                                                right:-60px;
+                                                                                                   color:red;
+                                                                }
+                                                                #sidebar-btn span{
+                                                                  height:1px;
+                                                                      background:#555;
+                                                                          margin-bottom:5px;
+                                                                              display:block;
+                                                                                  color:red;
+                                                                }
+                                                                #sidebar-btn span:nth-child(2){ 
+                                                                  width:75%;
+                                                                  
+                                                                }
+                                                                #sidebar-btn span:nth-child(3){ 
+                                                                  width:50%;
+                                                                  
+                                                                }
+
+
+/*This is for the animation of the square*/
+dov {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 4s;
 }
 
-#sidebar{
-  background:#151718;
-  width:200px;
-  height:100%;
-  display:block;
-  position:absolute;
-  left:-200px;
-  top:0px;
-  transition:left 0.3s linear;
-  
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
 }
 
-#sidebar.visible{
-      left:0px;
-      transition:left 0.3s linear;
+/* Standard syntax */
+@keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
 }
 
-ul{
-  margin:0px;
-  padding:0px;
-  
+#bg-video {
+    max-width: 100%;
+    min-width: 100%;
+    height: 200px;
+    min-height:100%;
+
 }
 
-ul li{
-  list-style:none;
-  
+#vidcontent {
+  width:100%;
+  height:200px;
+
 }
 
-ul li a{
-  background:#1C1E1F;
-  color:#ccc;
-  border-bottom:1px solid #111;
-  display:block;
-  width:180px;
-  padding:10px;
-  text-decoration:none;
-}
-
-#sidebar-btn{
-  display:inline-block;
-  vertical-align:middle;
-  height:20px;
-  width:20px;
-  cursor:pointer;
-    margin:20px;
-    position:absolute;
-    top:0px;
-    right:-60px;
-  color:red;
-}
-
-#sidebar-btn span{
-  height:1px;
-  background:#555;
-  margin-bottom:5px;
-  display:block;
-  color:red;
-}
-
-#sidebar-btn span:nth-child(2){ 
-  width:75%;
-  
-}
-
-#sidebar-btn span:nth-child(3){ 
-  width:50%;
-  
-}
-
-a:visited { 
-    color: green;
-}
-
-/* unvisited link */
-a:link {
-    color: green;
-}
-
-a:visited { 
-    color: pink;
-}
-</style>  
-
-
+</style>
+<!---------------------------------------------------------------------------------------------------------------------------------------->
 <head>
-    <meta charset="utf-8">
-     <title>Brandon's Website</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  
-  <body>
-    <div id="sidebar">
-    <!-- this orders the websites into a list -->
     
-    <ul>
-        <li><a href="index.html"><b>Home</b></a></li>
-  
-        <li><a href="portfolio.html"><b>Portfolio</b></a></li>
-        
-        <li><a href="csp_p4.html"><b>CSP_P4</b></a></li>
-        
-        <li><a href="pie.html"><b>Slideshow</b></a></li>
-        
-        <li><a href="theway.html"><b>The Way</b></a></li>
-        
-
-</ul>
-
- <div id="sidebar-btn">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+                    <meta charset="utf-8">
+                        <title>Brandon's Website</title>
+                            <link rel="stylesheet" type="text/css" href="style.css"> 
+                                <center><font color="black"><h1>Brandino Jaquez Extra Credit </h1></center></font>
+</head>
+<!---------------------------------------------------------------------------------------------------------------------------------------->
+<body>
     
-</div>
+                        <!-- This is how you call an image -->
+                        <center><font color="tomato"><p><h4>Brandon Jaquez Extra Credit</h4></font></center></p>
+                                                <!-- <center><img src="Img/PG1.png"></center>   -->                  
+                                
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script>
+<center>
+        <!-- Revise the below to tell the reader what you did over spring break.  Format it to look cool! -->
+  <!--  <h1 style="color:red">My Work:</h1>
+    <br>
+    <font size="5" color="blue">
+      <marquee behavior="scroll" direction="right">  <p title="Revise me"> It's not Spring Break yet, but I have many plans to tell. <br> The following is a list of those things:</p>
+    </font>
+    <font size="5" color="purple">
+        <p>I am going to work on the Econ music video w/ my friends. I will work for some $$ and I will waste my <br> life playing many video games.</p>
+    </font>
+    <font size="5" color="green">
+        <p>Furthermore, I will bask in my grade after turning this extra credit in.</p> </marquee>
+    </font> 
+</center> -->
 
-	$(document).ready(function(){
-		$('#sidebar-btn').click(function(){
-			$('#sidebar').toggleClass('visible');
-		});
-	});
 
-	</script>
-
-       <!--This is for the text/gifs -->
-       
-   <center> <h1 style="color:Tomato">This is my Home Page </h1> <p>
-    <img src="images/home.jpg" height="250"> <p> </center>
+<video width="1200" height="200" id="vidcontent" preload="false" playsinline="" autoplay="" muted="" loop="" data-flashblockwhitelisted="true" poster="https://i.ytimg.com/vi/Z7duexlg4vo/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLC3KaH7r4-LmOILUKNL_aiaRU20cQ">
+<source type="video/webm" src="Pres.webm">
+<source type="video/mp4" src="PressR.mp4"></video>
 
 
-  </body>
 
+  <center>  <br>
+    <img src="https://opgg-static.akamaized.net/images/medals/iron_1.png" alt="More fun with images" width="128" height="128">
+    <img src="https://cdn.leagueofgraphs.com/img/league-icons-v2/160/2-1.png" alt="More fun with images" width="128" height="128">
+    <img src="https://cdn.leagueofgraphs.com/img/league-icons-v2/160/3-1.png" alt="More fun with images" width="128" height="128">
+    <img src="http://elo-boost.net/images/tiers/gold_1.png" alt="Student name" width="128" height="128">
+    <img src="https://opgg-static.akamaized.net/images/medals/platinum_1.png" alt="More fun with images" width="128" height="128">
+    <img src="https://opgg-static.akamaized.net/images/medals/diamond_1.png" alt="More fun with images" width="128" height="128">
+    <img src="https://opgg-static.akamaized.net/images/medals/challenger_1.png" alt="More fun with images" width="128" height="128">
+</center>
+
+
+<br>
+    <center>                     <h1>Websites</h1>
+ 
+       <h2> <a href="https://www.tesla.com/" target="_blank">Favorite Website -</a>
+        <a href="https://watch.na.lolesports.com/schedule?leagues=lcs,lec,lck" target="_blank">- Favorite Sport -</a>
+       <a href="https://unknownworlds.com/subnautica/" target="_blank">- Favorite Game -</a>
+       <a href="https://www.cosmicprisons.com/" target="_blank">- Something I like</a> </h2>
+  </center>
+
+
+    
+                        <div id="sidebar">
+                        <!-- this orders the websites into a list -->
+                        
+                        <ul>                            
+                                                    <li><a href="index.html" target="_blank">Home</a></li>
+                                                    <li><a href="https://www.masterypoints.com/player/%20Raka%C5%84/na" target="_blank">My Mastery</a></li>
+                                                    <li><a href="https://na.op.gg/summoner/userName=Raka%C5%84" target="_blank">My OPGG</a></li>
+
+                        </ul>
+                        
+                        
+
+                        
+                        
+                    <!-- This is part of the button (how many little lines there are) -->
+                    
+                     <div id="sidebar-btn">
+                          <span></span>
+                              <span></span>
+                                  <span></span>
+                     </div>
+                        
+                    </div>
+                    
+                    <dov></dov>
+                    
+                    <!-- This is the javascript for the sidebar to open and close -->
+                    
+                	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+                	<script>
+                	        $(document).ready(function(){
+                	        	$('#sidebar-btn').click(function(){
+                		        	$('#sidebar').toggleClass('visible');
+                                                                        		});
+                                                                        	});
+                	</script>    
+    
+    
+</body>
+<!---------------------------------------------------------------------------------------------------------------------------------------->
 </html>
